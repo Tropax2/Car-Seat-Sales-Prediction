@@ -3,8 +3,8 @@
 In this project we use several tree regressor models to predict the number of car seat sales using data from 400 stores. The dataset is included in the files since it comes from the book Introduction to Statistical Learning by James, Witten, Hastie, Tibshirani and Taylor.
 
 ## Project Structure 
-    - `src/` - source code for model and evaluations;
-    - `reports` - detailed report and results obtained;
+-`src/` - source code for model and evaluations;
+-`reports` - detailed report and results obtained;
 
 ## Dataset 
 The dataset includes predictors capturing competitive and company pricing, advertising spend, and community demographics, as well as store placement and location indicators.
