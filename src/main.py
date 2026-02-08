@@ -9,7 +9,7 @@ import cv
 # This is the main function
 def main():
     # Get the file location 
-    path = r'/Users/afonsolopes/Sales_project/Carseats.csv'
+    path = r'filepath'
 
     # Transform into a df 
     Sales = data.csv_to_df(path)
