@@ -56,4 +56,10 @@ We first define the trees to have `max_depth` equal to 5 and with pruning parame
 
 ## Conclusion
 
-Across all models, ensemble methods substantially improve predictive performance over a single regression tree. Bagging achieved the best test performance (test MSE ≈ 3.44), while a random forest using all predictors at each split performed similarly (test MSE ≈ 3.45). Using the standard random-forest setting `max_features`≈√p (4 predictors) led to worse performance (test MSE ≈ 3.93), suggesting that a small number of strong predictors (notably Price, ShelveLoc_Good, and Age) drives most of the predictive power, and restricting candidate features at each split can weaken the quality of splits. Results are reported for a single 80/20 train/test split with hyperparameters selected via cross-validation on the training set; repeating the analysis across multiple random splits would provide a more robust estimate of generalization performance.
+## Conclusion
+
+Across all models, ensemble methods substantially improve predictive performance over a single regression tree. **Boosting achieved the best overall performance** (500 trees, learning rate 0.05), obtaining a test MSE of **≈ 2.72** with `max_depth=5` and no pruning (`ccp_alpha=0`), outperforming both **bagging** (test MSE ≈ **3.44**) and **random forest** (test MSE ≈ **3.45** when using all predictors at each split).
+
+Bagging delivered strong gains over a single pruned regression tree (test MSE ≈ **5.28**), while random forest was similar to bagging when `max_features` included all predictors. Using the standard random-forest setting `max_features≈√p` (4 predictors) led to worse performance (test MSE ≈ **3.93**), suggesting that a small number of strong predictors (notably **Price**, **ShelveLoc_Good**, and **Age**) drives most of the predictive power, and restricting candidate features at each split can weaken the quality of splits.
+
+Results are reported for a single 80/20 train/test split with hyperparameters selected via cross-validation on the training set; repeating the analysis across multiple random splits would provide a more robust estimate of generalization performance.
